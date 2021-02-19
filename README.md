@@ -110,14 +110,13 @@ to do this we have to configure into application.yml file
 for application.yml
 logging:
     file:
-      path= C:\Users\Dharmik\Documents\workspace-springboot-elk-stack\student-app-with-ELK-Stack-Log-Folder\elk-stack.log
+      name=  C:/Users/Dharmik/Documents/workspace-springboot-elk-stack/ELKStack-Log-Folder/elk-stack.log
 
 for application.properties
 
-logging.file.path= C:\Users\Dharmik\Documents\workspace-springboot-elk-stack\student-app-with-ELK-Stack-Log-Folder\elk-stack.log
+logging.file.name= C:/Users/Dharmik/Documents/workspace-springboot-elk-stack/ELKStack-Log-Folder/elk-stack.log
 
 in elk-stack.log our log data will be stored
-
 
 
 Step 5: 
@@ -131,7 +130,7 @@ inside this file insert below code: -
 
 input { 
 	file { 
-		path => "C:\Users\Dharmik\Documents\workspace-springboot-elk-stack\student-app-with-ELK-Stack-Log-Folder\elk-stack.log"
+		path => "C:/Users/Dharmik/Documents/workspace-springboot-elk-stack/ELKStack-Log-Folder/elk-stack.log"
 		start_position => "beginning"
 	} 
 }
@@ -237,6 +236,17 @@ search index name (in our case it is logstash-2021.02.18-000001 ) -> Next step (
 
 Now go to Discover 
 here you can see your logs 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
